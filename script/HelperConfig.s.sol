@@ -51,7 +51,7 @@ contract HelperConfig is Script {
     function getOrCreateAnvilEthConfig() public returns (NetworkConfig memory) {
         // happens when we have subsequent calls to this method.
         // avoid creating a new mock every time calling this method.
-        // address(0) is the default address value, it means nothing being set.
+        // address(0) is the default address value, it means nothing being set
         if (activeNetworkConfig.priceFeed != address(0)) {
             return activeNetworkConfig;
         }
